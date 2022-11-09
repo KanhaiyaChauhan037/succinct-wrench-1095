@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
+import Catagories from "../Components/Catagories";
 import Check from "../Components/Check";
 import MinibannerContainer from "../Components/MinibannerContainer";
 import MinibannerContainer2 from "../Components/MinibannerContainer2";
@@ -30,6 +31,8 @@ export default function Home() {
       <SingleImage img="https://files.myglamm.com/site-images/original/make2240X614.jpg"/>
       <MinibannerContainer2/>
       <MinibannerContainer3/>
+      <Catagories/>
+      <SingleImage img="https://files.myglamm.com/site-images/original/Sleek-banner-Web.jpg"/>
     </Box>
   );
 }

@@ -25,13 +25,13 @@ export default function MinibannerContainer2() {
       mt={{ base: "20px", sm: "20px", md: "25px", lg: "30px" }}
     >
       <Box
-        w="275px"
+        w={{ base: "200px", sm: "200px", md: "250px", lg: "275px" }}
         m={"auto"}
         textAlign="center"
         backgroundImage={"linear-gradient(white, white, #ff9797)"}
         mb="25px"
       >
-        <Text as={"b"} fontSize="xl">
+        <Text as={"b"} fontSize={{base:"sm",sm:"sm",md:"md",lg:"xl"}}>
           LATEST GLAMM LAUNCHES
         </Text>
       </Box>

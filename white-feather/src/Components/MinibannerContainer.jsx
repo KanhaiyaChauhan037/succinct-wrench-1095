@@ -25,23 +25,23 @@ export default function MinibannerContainer() {
       mt={{ base: "20px", sm: "20px", md: "25px", lg: "30px" }}
     >
       <Box
-        w="200px"
+        w={{ base: "150px", sm: "180px", md: "200px", lg: "200px" }}
         m={"auto"}
         textAlign="center"
         backgroundImage={"linear-gradient(white, white, #ff9797)"}
         mb="25px"
       >
-        <Text as={"b"} fontSize="xl">
+        <Text as={"b"} fontSize={{base:"sm",sm:"sm",md:"md",lg:"xl"}}>
           IN THE SPOTLIGHT
         </Text>
       </Box>
       <Box w="100%">
         <SimpleGrid
           templateColumns={{
-            base: "repeat(2, 1fr)",
-            sm: "repeat(4, 1fr)",
-            md: "repeat(8, 1fr)",
-            lg: "repeat(8, 1fr)",
+            base: "repeat(1, 1fr)",
+            sm: "repeat(3, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(3, 1fr)",
           }}
           justifyContent="space-between"
           gap={{ base: "20px", sm: "20px", md: "25px", lg: "30px" }}

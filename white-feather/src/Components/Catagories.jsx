@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import CatagoriesCard from "./CatagoriesCard";
 
@@ -45,7 +45,7 @@ export default function Catagories() {
       mt={{ base: "20px", sm: "20px", md: "25px", lg: "30px" }}
     >
       <Box
-        w="200px"
+        w={{ base: "200px", sm: "200px", md: "250px", lg: "275px" }}
         m={"auto"}
         textAlign="center"
         backgroundImage={"linear-gradient(white, white, #ff9797)"}
@@ -58,15 +58,15 @@ export default function Catagories() {
       <Box w="100%">
         <SimpleGrid
           templateColumns={{
-            base: "repeat(1, 1fr)",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-            lg: "repeat(3, 1fr)",
+            base: "repeat(2, 1fr)",
+            sm: "repeat(4, 1fr)",
+            md: "repeat(8, 1fr)",
+            lg: "repeat(8, 1fr)",
           }}
           justifyContent="space-between"
           gap={{ base: "20px", sm: "20px", md: "25px", lg: "30px" }}
         >
-          {miniB.map((el, i) => {
+          {cata.map((el, i) => {
             return <CatagoriesCard img={el.img} title={el.title} key={i} />;
           })}
         </SimpleGrid>
