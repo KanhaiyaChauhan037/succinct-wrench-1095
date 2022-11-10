@@ -8,8 +8,10 @@ import logoo from "./logoo.png";
 
 import "./address.css"
 
+
 export const AddressPage = () => {
 
+  
 
 
     // const handleHome = () => {
@@ -52,7 +54,6 @@ export const AddressPage = () => {
             <Box className='bord'>
                 <Box className='formC'>
                     <h3>Add New Address</h3>
-
                 </Box>
                 <hr />
                 <form>
@@ -83,7 +84,7 @@ export const AddressPage = () => {
                     </Box>
 
                     {/* button part  */}
-
+</form>
                     <Box>
 
                         <Box className='te'>
@@ -101,7 +102,7 @@ export const AddressPage = () => {
                             <Checkbox defaultChecked>Set As Default Address</Checkbox>
                         </Box>
                     </Stack>
-                </form>
+            
                 <Stack>
                     <Box className='btn btn2'>
                         <button>Back</button>

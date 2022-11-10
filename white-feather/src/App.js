@@ -1,5 +1,6 @@
 import './App.css';
 import {AddressPage} from './Pages/Address';
+import CheckOut  from './Pages/CheckOut';
 
 
 
@@ -7,8 +8,9 @@ import {AddressPage} from './Pages/Address';
 function App() {
   return (
     <div>
-  <AddressPage/>
+  {/* <AddressPage/> */}
 
+<CheckOut/>
     </div>
   );
 }

@@ -1,139 +1,198 @@
-import { Box, Text, Flex, Button, Input, Img } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import {Box,Grid,GridItem,Image,Stack,Select ,Text, flexbox,Flex,Spacer, Input, Container} from "@chakra-ui/react";
 
-import { useTheme } from "@chakra-ui/react";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
 import "./CheckOut.css";
-import { useNavigate } from "react-router-dom";
 
-export const CheckOut = () => {
-  const theme = useTheme();
-  const navigate = useNavigate();
-  const [paisa, setPaisa] = useState(0);
-  // useEffect(() => {
-   
-  //   setPaisa(x);
-  // }, []);
+import logo from  "./logoo.png";
+
+const CheckOutPage=()=>{
+
+
 
   return (
-    <Box initialColorMode="light" mt="10">
-      <Text fontSize="3xl" paddingBottom={10} fontFamily="sans-serif">
-        Checkout
-      </Text>
+    <div className="mujhe">
 
-      <Flex>
-        <Box w="55%">
-          <Box
-            textAlign={"center"}
-            paddingLeft="40%"
-            paddingTop="5%"
-            paddingBottom={10}
-          >
-            <Flex>
-              <Text paddingTop="10px">Already have an Account?</Text>
-              <Text
-                marginLeft="15%"
-                fontSize="12px"
-                padding="12px 40px 12px 40px"
-                className="mujhko"
-                top="0"
-                border="1.5px solid black"
-              >
-                SIGN IN
-              </Text>
-            </Flex>
-          </Box>
-          <Text fontWeight="500">YOUR ORDERS</Text>
-        <Flex border='1px solid lightgray' mt='5' justifyContent='center' ml='145' w='70%'>  <Box width="100px">
-          {" "}
-          <Img pr='2'borderRight="1px solid lightgray" src="https://files.myglamm.com/site-images/original/Twstr-(1).jpg" />
-        </Box>
-        <Box mt="4%" w="40%"pr='2' borderRight="1px solid lightgray">
-          {" "}
-          TWIST IT MASCARA
-        </Box>
-        <Box mt="4%" w="10%" ml="5%"pr='2' borderRight="1px solid lightgray">
-        ₹ 112
-        </Box>
-        <Box mt="3%" w="10%">
-         
-        </Box>
-        <Box mt="4%" fontWeight="600">Total :{paisa}</Box></Flex>
-        </Box>
+<div>
 
-        <Box
-          bg={theme.colors.primary.women}
-          padding="2%"
-          lineHeight="300%"
-          w="30%"
-        >
-          <Text fontWeight="500" textAlign="left">
-            Apply Promo Code
-          </Text>
-          <Flex>
-            <Img src="https://www.myglamm.com/images/discount.svg" />
-            <Input
-              type="textarea"
-              class="applyTextArea "
-              placeholder="PROMO CODE"
-              autocapitalize="true"
-              spellcheck="false"
-              autocomplete="false"
-              value="GLAMM40"
-            />
-            <Button id="applyButton" onclick="promocode()">
-              {" "}
-              APPLY
-            </Button>
-          </Flex>
-          {/* https://www.myglamm.com/images/discount.svg */}
+<Box className='nub'>
+                <Box className='nubl'>
+                    <Image className='sr' src={logo} />
+                    </Box>
 
-          <Flex id="discountApply">
-            <h3>Discount</h3>
-            <p id="discountAmount">-₹00.00</p>
-          </Flex>
-          <Text fontWeight="500" textAlign="left">
-            Order Summary
-          </Text>
-          <Box lineHeight="200%" paddingBottom={7}>
-            <Flex justifyContent="space-between">
-              <Box>Actual Amount</Box>
-              <Box textAlign="right">Amount</Box>
-            </Flex>
-            <Flex justifyContent="space-between">
-              <Box>Shipping Charges</Box>
-              <Box align="right">FREE</Box>
-            </Flex>
-            <Flex justifyContent="space-between">
-              <Box>Discount coupon</Box>
-              <Text textAlign="center"> discount amount</Text>
-            </Flex>
-          </Box>
-          <Flex justifyContent="space-between">
-            <Box lineHeight="150%" paddingBottom={7}>
-              <Box fontWeight='600' textAlign="left">
-                Amount to Pay
-              </Box>
-              <Box color={theme.colors.primary.main}>
-                Note: Inclusive of all taxes
-              </Box>
+                <Box>
+                    <Stack spacing={3}>
+                        <Select placeholder='User Accout' size="md">
+                            <option>My Profile</option>
+                            <option>My Order</option>
+                            <option>My Dashboard</option>
+                            <option>My GlammOX Party</option>
+                            <button>dffdfdf</button>
+                        </Select>
+                    </Stack>
+                </Box>
             </Box>
-            <Box float="right" fontWeight="600" >
-              Final amount: {paisa}
-            </Box>
-          </Flex>
-          <Box
-            bg="black"
-            padding="3px"
-            w="100%"
-            color="white"
-            onClick={() => navigate("/payment")}
-            className="mujhko"
-          >
-            PROCEED TO PAYMENT <ArrowForwardIcon />
-          </Box>
-        </Box>
-      </Flex>
+</div>
+<hr />
+
+
+
+
+
+
+
+    <Box  textAlign="center" >
+      <h2>CHECKOUT</h2>
     </Box>
-  );
-};
+
+
+<div className="Main">
+ <div className="part1">
+
+  <div>
+    <h4>SHIPING ADDRESS</h4>
+    <hr />
+<Flex w="40%">
+  <Box>
+    <Text fontWeight="bold">Expected Delivery Date..</Text>
+  </Box>
+  <Spacer/>
+  <p>20-Nov-2022</p>
+</Flex>
+
+   
+  </div>
+  <div>
+    <h4>YOUR ORDER</h4>
+    <hr />
+  </div>
+ </div>
+
+{/* your coupen area  */}
+
+ <div className="part2">
+<Box>
+  <Text fontSize='24px'>Order Summary</Text>
+</Box>
+<Flex>
+  <Box p='10' >
+   MRP
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   -10222
+  </Box>
+</Flex>
+
+<Flex>
+  <Box p='10' >
+  Discout MRP
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   -10222
+  </Box>
+</Flex>
+<Box ><h4>Apply Promo code</h4></Box>
+
+<div className="intt" >
+  <input type="text" placeholder="PROMO CODE" />
+  <button>APPLY</button>
+</div>
+
+<Flex>
+  <Box p='10' >
+  Discout
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   (-Rs 0)
+  </Box>
+</Flex>
+
+<Flex>
+  <Box p='10' >
+  Shipping Charges
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   FREE
+  </Box>
+</Flex>
+
+<Flex>
+  <Box p='10' >
+<h4> Amount Payble </h4>
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   <h4>Rs. price</h4>
+  </Box>
+</Flex>
+
+
+<Flex>
+  <Box p='10' >
+ You Saved
+  </Box>
+  <Spacer />
+  <Box p='10' >
+ rs 0
+  </Box>
+</Flex>
+
+
+<Flex>
+  <Box p='10' >
+  You will earn
+  </Box>
+  <Spacer />
+  <Box p='10' >
+   gold coin
+  </Box>
+</Flex>
+<div className=" in2" >
+  <button >PROCEED TO PAYMENT</button>
+</div>
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  )
+}
+
+export default CheckOutPage;
