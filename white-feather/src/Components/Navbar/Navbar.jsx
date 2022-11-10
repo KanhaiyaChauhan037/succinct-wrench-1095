@@ -4,9 +4,12 @@ import { BiSearchAlt2, BiStoreAlt } from "react-icons/bi";
 import { HiGift } from "react-icons/hi";
 import { BsPerson, BsBag } from "react-icons/bs";
 import { Image,Heading,HStack,Text,Spacer } from "@chakra-ui/react";
+import { AppContext } from '../../Context/AppContextProvider'
+import { useContext } from "react";
 
 /* #262726 #fafafa */
-const newNav = () => {
+const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useContext(AppContext)
   return (
     <>
       <div className="ad-store">
@@ -39,7 +42,7 @@ const newNav = () => {
           <div className="navbar-icon">
             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
             <div className="lineDiv"></div>
-            <BsPerson color="#fafafa" size="1.5rem" />
+            <BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{cursor:'pointer'}} />
           </div>
         </div>
         <div className="navbar-bottom">
@@ -638,4 +641,4 @@ const newNav = () => {
   );
 };
 
-export default newNav;
+export default Navbar;
