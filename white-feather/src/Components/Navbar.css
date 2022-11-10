@@ -27,7 +27,11 @@ p{
 }
 .navbar{
     display: flex;
+    flex-direction: column;
     background-color: #262726;
+}
+.navbar-top{
+    display: flex;
     align-items: center;
     padding: 0rem 2rem;
 }
@@ -55,3 +59,113 @@ p{
     height: 2rem;
     background: white;
 }
+.navbar-bottom{
+    background-color: white;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.5rem 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+    margin-top: 0.5rem;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: display .15s ease-out;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+}
+.dropdown-content{
+    display: flex;
+    gap: 8rem;
+}
+.dropdown-content > div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.dropdown-item a {
+    width: 100%;
+    height: 100%;
+}
+.has-dropdown:hover .dropdown   {
+    display: block;
+    pointer-events: auto;
+}
+.dropdown-content-heading{
+    color: #faa8a8;
+    font-weight: 800;
+}
+.dropdown-content-heading:hover{
+    color: #262726;
+}
+.dropdown-content > div > button,.nav-item button{
+    position: relative;
+    text-align: left;
+    width: fit-content;
+}
+.dropdown-content > div > button > a::before,.nav-item button > a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.15rem;
+    background-color: #faa8a8;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.dropdown-content > div > button > a:hover::before,.nav-item button > a:hover:before{
+    transform: scaleX(1);
+}
+.dropdown-content-imageProduct{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+.dropdown-content-imageProduct > center{
+    padding: 1rem;
+    border: 1px solid rgb(219, 219, 219);
+
+}
+
+
+/* ============== MEDIUM DEVICES ============== */
+@media screen and (max-width:1024px){
+    .inputDiv {
+        width: 60%;
+    }
+    .navbar-nav {
+        font-size: 0.8rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+  }
+  
+  /* ============== SMALL DEVICES ============== */
+  @media screen and (max-width:600px){
+
+  }
