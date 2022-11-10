@@ -1,44 +1,120 @@
-import { Box, Flex, Input, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import {
+    Box, Button, Checkbox, Flex,
+    FormControl, Grid, Input, Select, Text
+    , Image, Option, FormLabel, Stack, Textarea
+} from '@chakra-ui/react'
+
+import logoo from "./logoo.png";
+
+import "./address.css"
 
 
-export const CheckoutForm = ({ checkoutForm,setCheckoutForm}) => {
- 
- const onChange =(e)=>{
-const {name,value} = e.target
+export const AddressPage = () => {
 
- 
-setCheckoutForm({
-    ...checkoutForm,
-    [name]:value,
-   })
+  
 
- }
 
- 
+    // const handleHome = () => {
+    
+
+
+    // }
+
+    // const handleOffice = () => {
+
+
+
+    // }
+
+
+
     return (
-        <>
-            <Box>
-                <Text fontSize={'20px'} fontWeight={600} mb={'20px'}>Enter your name and address:</Text>
 
-                <Flex flexDirection={'column'} gap={'20px'}>
-                    <Input onChange={onChange} type={'text'} name={'firstName'} placeholder={'First Name*'} />
-                    <Input onChange={onChange} type={'text'} name={'lastName'} placeholder={'Last Name*'} />
-                    <Input onChange={onChange} type={'text'} name={'addressLine1'} placeholder={'Address Line 1*'} />
-                    <Input onChange={onChange} type={'text'} name={'addressLine2'} placeholder={'Address Line 2'} />
-                    <Flex gap={'20px'}>
-                        <Input onChange={onChange} type={'text'} name={'locality'} placeholder={'City/Locality*'} />
-                        <Input onChange={onChange} type={'number'} name={'pinCode'} placeholder={'Pin Code*'} />
-                    </Flex>
-                    <Flex gap={'20px'}>
-                        <Input onChange={onChange} type={'text'} name={'state'} placeholder={'State/Territory*'} />
-                        <Input onChange={onChange} type={'text'} name={'country'} placeholder={'Country*'} />
-                    </Flex>
-                    <Text fontSize={'20px'} fontWeight={600} mt={'30px'}>What's your contact information?</Text>
-                    <Input onChange={onChange} type={'email'} name={'email'} placeholder={'Email*'} />
-                    <Input onChange={onChange} type={'number'} name={'mobile'} placeholder={'Mobile*'} />
-                </Flex>
+        <Box className='main' >
+            {/* Navbar Part  */}
+
+            <Box className='nub'>
+                <Box className='nubl'>
+                    <Image className='sr' src={logoo} />
+                    </Box>
+
+                <Box>
+                    <Stack spacing={3}>
+                        <Select placeholder='User Accout' size="md">
+                            <option>My Profile</option>
+                            <option>My Order</option>
+                            <option>My Dashboard</option>
+                            <option>My GlammOX Party</option>
+                            <button>dffdfdf</button>
+                        </Select>
+                    </Stack>
+                </Box>
             </Box>
-        </>
-    );
-};
+
+            <Box className='bord'>
+                <Box className='formC'>
+                    <h3>Add New Address</h3>
+                </Box>
+                <hr />
+                <form>
+                    <Box px="5">
+                        <h4>Contact</h4>
+                        <Box className='formF' id='hh'>
+                            <input type="text" placeholder='Name' required />
+
+                            <input value="91" type="number" required />
+
+                            <input type="number" placeholder='Number' required />
+
+                        </Box>
+                    </Box>
+                    <Box className='hrr'>
+                        <hr />
+                    </Box>
+
+                    <Box className='f'>
+                        <h4>Address</h4>
+                        <Box className='formF'>
+                            <input type="number" placeholder='Pin code' required />
+                            <input type="text" placeholder='City' required />
+                            <input type="text" placeholder='State' required />
+
+                        </Box>
+                        <Textarea placeholder='Address' required />
+                    </Box>
+
+                    {/* button part  */}
+</form>
+                    <Box>
+
+                        <Box className='te'>
+                            <Text> Type of Address</Text>
+                        </Box>
+                        <Box className='btn'>
+                            <button >Home</button>
+                            <button >Office</button>
+                        </Box>
+
+                    </Box>
+                    <Stack>
+                        <Box className='check'>
+
+                            <Checkbox defaultChecked>Set As Default Address</Checkbox>
+                        </Box>
+                    </Stack>
+            
+                <Stack>
+                    <Box className='btn btn2'>
+                        <button>Back</button>
+                    </Box>
+                </Stack>
+                <Box className='btn1'>
+                    <button>SHIP TO THIS ADDRESS</button>
+                </Box>
+            </Box>
+
+        </Box>
+
+    )
+
+}

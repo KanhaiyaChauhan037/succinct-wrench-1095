@@ -1,19 +1,80 @@
-.mujhko:hover{
+
+.mujhe{
+   
+}
+
+.Main{
+    width: 95%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 2%;
+}
+
+.Main>div:nth-child(1){
+    /* background-color: gray; */
+    width: 120%;
+    height: 650px;
+
+}
+
+
+.Main>div:nth-child(2){
+    background-color: #f7f7f7;
+    width: 80%;
+    height: 650px;
+    /* border: 1px solid red; */
+    justify-content: right;
+
+}
+.part1>div:nth-child(1){
+    height: 350px;
+
+}
+.part2{
+    padding: 20px;
+}
+
+input{
+    width: 75%;
+    height: 7vh;
+font-size: 20px;
+font-weight: bold;
+padding: 5px;
+}
+.intt{
+    display: flex;
+margin-top: -2%;
+margin-bottom:1% ;
+padding: 10px;
+}
+.intt>button{
+width: 30%;
+background-color: black;
+color: white;
+border-radius: 5px;
+font-size: 18px;
+cursor: pointer;
+
+}
+.in2 {
+    display: flex;
+   
+    padding: 10px;
+  
+   
+
+}
+.in2>button{
+    /* margin: auto; */
+    width: 100%;
+    height: 9vh;
     background-color: black;
-    
-    color:aliceblue;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+ margin: auto;
     cursor: pointer;
-}
-.Babulal{
-    width:70%;
-    height:auto;
-    margin:auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.mehudon{
-    z-index: 1;
-}
-.shahrukh{
-    margin: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
