@@ -1,3 +1,4 @@
+import Home from "./Pages/Home";
 import './App.css';
 import {CheckoutForm} from './Pages/Address';
 // import Delivery from './Pages/Address';
@@ -10,6 +11,7 @@ function App() {
   return (
    <div className="App">
       <Navbar />
+      <Home />
       <CheckoutForm/>
        {/* <CheckOut/>
         <Delivery/> */}
