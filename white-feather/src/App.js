@@ -6,7 +6,7 @@ import {AddressPage} from './Pages/Address';
 
 function App() {
   return (
-    <div className="App">
+    <div>
   <AddressPage/>
 
     </div>
