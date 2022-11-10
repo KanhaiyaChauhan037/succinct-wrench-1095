@@ -30,13 +30,10 @@ function MyBagNavbar() {
 
             <Box border='2px' borderColor='gray.200' p="6px"
             
-            height={{
-                base: '100%',
-                sm:"50", // 0-48em
-                md: '75%', // 48em-80em,
-                xl: '100%', // 80em+
-              }}
-              bg='teal.400'
+            height="100px"
+           
+            
+           
               width={[
                 '100%', // 0-30em
                 '50%', // 30em-48em
@@ -46,11 +43,11 @@ function MyBagNavbar() {
 
                 display="flex" gap="1%"
                 alignItems="center"
-                //  fontfamily: sans-serif;
+               
                 fontFamily="sans-serif"
 
             >
-                <Box ml="6%">
+                <Box ml="6%" mt="1%">
                     <Image src='https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg' alt='m_logo'
                         objectFit="cover" />
                 </Box>
