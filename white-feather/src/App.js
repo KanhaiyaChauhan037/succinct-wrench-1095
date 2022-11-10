@@ -9,10 +9,10 @@ import MyBag from "./Components/MyBag"
 function App() {
   return (
    <div className="App">
+      <Navbar />
       <CheckoutForm/>
        {/* <CheckOut/>
         <Delivery/> */}
-      <Navbar />
       <AllRoutes />
       <MyBag/>
     </div>
