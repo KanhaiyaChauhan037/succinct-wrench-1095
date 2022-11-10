@@ -1,16 +1,14 @@
 import './App.css';
-import {CheckoutForm} from './Pages/Address';
-// import Delivery from './Pages/Address';
-// import { CheckOut } from './Pages/CheckOut';
+import {AddressPage} from './Pages/Address';
+
 
 
 
 function App() {
   return (
     <div className="App">
-  <CheckoutForm/>
-  {/* <CheckOut/>
-<Delivery/> */}
+  <AddressPage/>
+
     </div>
   );
 }
