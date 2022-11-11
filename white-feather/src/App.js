@@ -1,6 +1,5 @@
 import './App.css';
-import MyBag from "./Components/MyBag"
-import Headline from './Components/headline';
+import Headline from './Components/Headline';
 import AllCircuits from './Routes/AllCircuits';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
     <Headline />
     <AllCircuits />
-      <MyBag/>
     </div>
   );
 }

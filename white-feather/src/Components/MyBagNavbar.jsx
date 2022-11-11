@@ -26,7 +26,7 @@ function MyBagNavbar() {
 
 
     return (
-        <div>
+        <>
 
             <Box border='2px' borderColor='gray.200' p="6px"
             
@@ -125,7 +125,7 @@ function MyBagNavbar() {
 
 
 
-        </div >
+        </ >
     )
 }
 

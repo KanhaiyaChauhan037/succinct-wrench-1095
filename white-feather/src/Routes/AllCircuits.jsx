@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { CartProvider } from "react-use-cart";
 import Home from "../Routes/Home";
 import Makeup from "../Routes/Makeup"
 import SingleProduct from "../Routes/SingleProduct";
@@ -12,8 +13,16 @@ const AllCircuits = () => {
   return <Routes>
     <Route path="/" element={<Home />}/>
       <Route path="/makeup" element={<Makeup />}/>
-      <Route path="/cart" element={<Cart />}/>
-      <Route path="/singleproduct/:id" element={<SingleProduct />}/>
+      <Route path="/cart" element={
+        <CartProvider>
+          <Cart />
+        </CartProvider>
+       }/>
+      <Route path="/singleproduct/:id" element={
+        <CartProvider>
+          <SingleProduct />
+        </CartProvider>
+      }/>
     </Routes>
 }
 

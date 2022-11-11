@@ -4,18 +4,10 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 
 const MyBag = () => {
-
-
-
-
-    return (
+   return (
         <div>
-         
-    
-
-          
             <ChakraProvider>
-            <MyBagNavbar />
+              <MyBagNavbar />
             </ChakraProvider>
         </div>
     )

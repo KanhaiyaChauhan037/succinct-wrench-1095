@@ -10,9 +10,9 @@ const SingleProductCard = ({id,image,product,title,shade,price}) => {
         <Text fontWeight={"bold"} lineHeight="50px" mt="70px" fontSize={"20px"}>{product}</Text>
         <Text lineHeight="50px" fontSize={"18px"}> {title} </Text>
         <Text lineHeight="50px" fontSize={"15px"}>{shade}</Text>
-        <Text lineHeight="50px" fontSize={"20px"}> {price} </Text>
+        <Text lineHeight="50px" fontSize={"20px"}> ₹{price} </Text>
     </Box>
   )
 }
 
-export default SingleProductCard
+export default SingleProductCard;

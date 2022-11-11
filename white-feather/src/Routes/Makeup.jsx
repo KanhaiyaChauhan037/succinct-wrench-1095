@@ -11,7 +11,7 @@ const Makeup = () => {
 
   useEffect(()=>{
     setLoading(true)
-    axios.get("https://whitefeather123.herokuapp.com/data")
+    axios.get("https://localdatawhitefeather.herokuapp.com/data")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
