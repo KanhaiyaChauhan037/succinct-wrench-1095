@@ -11,14 +11,14 @@ import CheckOut  from './Pages/CheckOut';
 function App() {
   return (
    <div className="App">
-      <Navbar />
-      <Home />
-      <CheckoutForm/>
+      {/* <Navbar /> */}
+      {/* <Home /> */}
+      {/* <CheckoutForm/>
        <CheckOut/>
         {/* <Delivery/> */}
-      <AllRoutes />
+      {/* <AllRoutes />
       <MyBag/>
-      {/* <AddressPage/> */}
+      <AddressPage/> */}
     </div>
   );
 }
