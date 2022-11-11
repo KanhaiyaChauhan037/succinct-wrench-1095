@@ -8,7 +8,7 @@ import axios from "axios"
 import { ArrowForwardIcon, CloseIcon } from "@chakra-ui/icons";
 
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelctor } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 
@@ -19,25 +19,67 @@ import { useNavigate } from "react-router-dom";
 
 const MyBagMainFile = () => {
 
-    const data = [
+    const [data, setData] = useState([])
+    const [total, setTotal] = useState(0);
+    const [remove, setRemove] = useState(false)
+
+    const datas = [
         {
             id: 1,
             title: "batman",
             image: "https://cdn-icons-png.flaticon.com/128/4140/4140048.png",
             price: 999,
-            quantity: 1
+            total: 1
         }
         ,
         {
             id: 2,
             title: "batman",
             image: "https://cdn-icons-png.flaticon.com/128/4140/4140048.png",
-            price: 999,
-            quantity: 1
+            price: 9199,
+            total: 1
         },
-    
+
+
 
     ]
+
+    // ...................working fine.................................................
+
+    useEffect(() => {
+        setData(datas)
+    }, [])
+
+
+
+    const IncDecValue = (e, id) => {
+
+        setData(data => data.map((el) =>
+            el.id === id ? { ...el, total: Number(el.total) + e } : el
+        ))
+        let amount = data.reduce((sum, el) => {
+
+            return sum += Number(el.price) * Number(el.total)
+        }, 0)
+        setTotal(amount)
+    }
+
+    useEffect(() => {
+        let amount = data.reduce((sum, el) => {
+            console.log(el, "check el")
+            return sum += el.price * Number(el.total)
+        }, 0)
+        setTotal(amount)
+    }, [data, setTotal])
+
+
+    useEffect(() => {
+        localStorage.setItem("total", JSON.stringify(total));
+
+    }, [total]);
+
+    // ..........................delete function...................
+
 
 
 
@@ -50,35 +92,41 @@ const MyBagMainFile = () => {
             mt="1%" w="auto">
 
             <Box
-            // border="1px solid yellow"
+            // border="1px solid blue"
             >
 
-                <Text fontSize="35px" paddingBottom={10}>
+                <Text fontSize="30px" paddingBottom={6} textAlign="center" fontFamily="sans-serif">
                     MY BAG(0)
                 </Text>
             </Box>
             {/* 2nd //........black border */}
 
-            <Box width="75%" m="auto" gap="5px" bg="black" p="8px" >
+            <Box width="75%" m="auto" gap="5px" bg="black" p="7px" >
                 <Box display="flex" justifyContent="center" gap="10px" >
                     <Text fontSize="26px" color="white">Congrats! </Text>
                     <Text fontSize="25px" color="white">You're eligible
                         for free gift
                     </Text >
                     <Text fontSize="25px" color="white" >
-                        <Link ><u > Plese Select  </u> </Link>
+                        <Link ><u > Plese Selct  </u> </Link>
                     </Text>
                 </Box>
             </Box>
             {/* 2nd */}
-            {/* 3rd     maping............................*/}
+            {/* 3rd  .................................   maping............................*/}
 
             <Flex
                 // border="1px solid purple" 
                 marginLeft="15%" gap="10" width="70%" mt="2%" direction={"column"} >
+
+
+
+
                 {data.map((el, ind) => (
                     <Flex key={el.id} display={"flex"} textAlign={"center"}
-                        justifyContent="center" borderBottom="1px" borderColor="lightgray" >
+                        justifyContent="center" borderBottom="1px" borderColor="lightgray"
+                    // border="1px"
+                    >
 
                         {/* ...................................................................... */}
                         <Box width="100px" >{" "}
@@ -92,21 +140,21 @@ const MyBagMainFile = () => {
                         </Box>
 
                         {/* ........................................................................ */}
-                        {/* button ...............*/}
+                        {/* button ............................function............*/}
 
                         <Box mt="3%" w="10%">
                             <Flex>
-                                <Button>+</Button>
-                                <Text textAlign={"center"} margin="5px"> {el.quantity} </Text>
-                                <Button>-</Button>
+                                <Button onClick={() => IncDecValue(1, el.id)} >+</Button>
+                                <Text textAlign={"center"} margin="6px"> {el.total} </Text>
+                                <Button onClick={() => IncDecValue(-1, el.id)} >-</Button>
                             </Flex>
                         </Box>
 
                         {/* ............................................................................ */}
-                        {/* ........................................ */}
+                        {/* ..............total Price.......................... */}
 
                         <Box padding={"0px 5px 0px 5px"} mt="4%">
-                            ${el.price}
+                            ₹ {el.total * el.price}
                         </Box>
 
                         <Box mt="4%" marginLeft={"5%"} cursor="pointer">
@@ -154,18 +202,19 @@ const MyBagMainFile = () => {
 
 
             <Box
-                // border="1px solid teal"
+                border="1px solid teal"
                 bg="black"
-                padding="10px"
-                w="30%"
+                padding="8px"
+                w="22%"
                 color="white"
                 marginLeft="35%"
-                mt="3%"
+                mt="2%"
+                
             >
                 PROCEED TO CHECKOUT <ArrowForwardIcon />
             </Box>
 
-            <Box  borderBottom="1px" borderColor="lightgray" mt="2%">
+            <Box borderBottom="1px" borderColor="lightgray" mt="2%">
 
             </Box>
 

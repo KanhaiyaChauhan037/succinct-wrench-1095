@@ -49,8 +49,9 @@ function MyBagNavbar() {
                 fontFamily="sans-serif"
 
             >
-                <Box ml="6%" mt="1%">
-                    <Image src='https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg' alt='m_logo'
+                <Box ml="6%" mt="1%"    w="5%">
+                    <Image src='https://i.ibb.co/Jtvk4Lf/White-Feather.png' alt='m_logo' 
+                    // width="17%" h="25%"
                         objectFit="cover" />
                 </Box>
 
