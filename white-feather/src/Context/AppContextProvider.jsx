@@ -8,9 +8,9 @@ export const AppContext = createContext();
 
 const AppContextProvider = ({children}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [first, setfirst] = useState("second")
+    const [isLogin, setIsLogin] = useState(null)
   return (
-    <AppContext.Provider value={{isOpen, onOpen, onClose,first,setfirst}}>
+    <AppContext.Provider value={{isOpen, onOpen, onClose,isLogin,setIsLogin}}>
         {children}
     </AppContext.Provider>
   )

@@ -1,15 +1,19 @@
 import React from "react";
 import "./Navbar.css";
 import { BiSearchAlt2, BiStoreAlt } from "react-icons/bi";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { HiGift } from "react-icons/hi";
 import { BsPerson, BsBag } from "react-icons/bs";
 import { Image,Heading,HStack,Text,Spacer } from "@chakra-ui/react";
 import { AppContext } from '../../Context/AppContextProvider'
+import { AuthContext } from '../../Context/AuthContextProvider'
 import { useContext } from "react";
 
 /* #262726 #fafafa */
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useContext(AppContext)
+  const {user} = useContext(AuthContext)
+  const {email} = user
+  const { isOpen, onOpen, onClose,isLogin,setIsLogin } = useContext(AppContext)
   return (
     <>
       <div className="ad-store">
@@ -42,7 +46,23 @@ const Navbar = () => {
           <div className="navbar-icon">
             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
             <div className="lineDiv"></div>
-            <BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{cursor:'pointer'}} />
+            {
+              user?.email?(
+              <div className="accountName">
+                <div>
+                  <h2>{email}</h2>
+                  <IoMdArrowDropdown />
+                </div>
+              <div className="accountName-dropDown">
+                <a href="#">My Profile</a>
+                <a href="#">My Orders</a>
+                <a href="#">My Dashboard</a>
+                <button>Sign Out</button>
+              </div>
+              </div>
+              ):(<BsPerson color="#fafafa" size="1.5rem" onClick={onOpen} style={{cursor:'pointer'}} />)
+            }
+            
           </div>
         </div>
         <div className="navbar-bottom">
