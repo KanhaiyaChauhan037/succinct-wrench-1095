@@ -10,7 +10,7 @@ function BasicUsage() {
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent style={{backgroundColor:'#262726'}}>
           <HStack mt={8}><Spacer /><p style={{fontSize:'0.7rem'}}>Get 15% Good Points back on every order</p><Spacer /></HStack>
           {/* <ModalHeader>Modal Title</ModalHeader> */}
           <HStack mt={2}>
