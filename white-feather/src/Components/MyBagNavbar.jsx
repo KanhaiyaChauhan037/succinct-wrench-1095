@@ -28,21 +28,23 @@ function MyBagNavbar() {
     return (
         <div>
 
-            <Box border='2px' borderColor='gray.200' p="6px"
+            <Box border='2px' borderColor='gray.200' p="6px"  w={{ base: "100%", sm: "100%", md: "100%", lg: "80%" }}
+      m="auto"
+      mb={"20px"}
             
-            height={{
-                base: '100%',
-                sm:"50", // 0-48em
-                md: '75%', // 48em-80em,
-                xl: '100%', // 80em+
-              }}
-              bg='teal.400'
-              width={[
-                '100%', // 0-30em
-                '50%', // 30em-48em
-                '75%', // 48em-62em
-                '100%', // 62em+
-              ]}
+            // height={{
+            //     base: '100%',
+            //     sm:"50", // 0-48em
+            //     md: '75%', // 48em-80em,
+            //     xl: '100%', // 80em+
+            //   }}
+            //   bg='teal.400'
+            //   width={[
+            //     '100%', // 0-30em
+            //     '50%', // 30em-48em
+            //     '75%', // 48em-62em
+            //     '100%', // 62em+
+            //   ]}
 
                 display="flex" gap="1%"
                 alignItems="center"
