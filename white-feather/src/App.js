@@ -1,6 +1,6 @@
 import Home from "./Pages/Home";
 import './App.css';
-import {CheckoutForm} from './Pages/Address';
+// import {CheckoutForm} from './Pages/Address';
 // import Delivery from './Pages/Address';
 import AllRoutes from './Routes/AllRoutes';
 import Navbar from './Components/Navbar';
@@ -13,12 +13,12 @@ function App() {
    <div className="App">
       {/* <Navbar /> */}
       {/* <Home /> */}
-      {/* <CheckoutForm/>
-       <CheckOut/>
-        {/* <Delivery/> */}
-      {/* <AllRoutes />
-      <MyBag/>
-      <AddressPage/> */}
+       {/* <CheckoutForm/> */}
+       {/* <CheckOut/> */}
+         {/* <Delivery/>  */}
+       {/* <AllRoutes /> */}
+      {/* <MyBag/> */}
+      {/* <AddressPage/>  */}
     </div>
   );
 }
