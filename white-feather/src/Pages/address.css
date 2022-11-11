@@ -1,0 +1,144 @@
+.bord {
+  border: 1px solid rgb(205, 200, 200);
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+margin-top: 1%;
+}
+
+.nub {
+  display: flex;
+  width: 90%;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  align-items: center;
+  margin: auto
+}
+
+.formC {
+  width: 90%;
+  margin: auto;
+}
+
+.formC>h3 {
+  text-align: center;
+}
+
+.formF {
+  width: 70%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+
+
+}
+
+.formF>input {
+  height: 7vh;
+  width: 45%;
+  border-radius: 5px;
+  border: 1px solid gray;
+
+
+
+
+}
+
+.hrr>hr {
+  height: 9px;
+  background-color: #f3f4f6;
+  margin-top: 3%;
+  border: none;
+}
+
+.f>textarea {
+
+  width: 40%;
+  margin-top: 3%;
+  height: 7vh;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+#hh>input:nth-child(2) {
+  width: 10%;
+}
+
+.btn>button {
+  width: 10%;
+  height: 7vh;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: #ffcbcb;
+  border: 1px solid #ffcbcb;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  gap: 20px;
+
+}
+
+.btn>button:focus {
+  background-color: antiquewhite;
+}
+
+Checkbox {
+  border: 1px solid gray;
+}
+
+.btn1>button {
+  width: 20%;
+  height: 7vh;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn1 {
+  display: flex;
+  justify-content: right;
+
+}
+
+.btn1>button {
+  background-color: #ffcbcb;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn2 {
+  margin-top: 3%;
+}
+
+.btn2>button {
+  color: #ffcbcb;
+  background-color: white;
+  /* border-color: #ffcbcb; */
+  border: 1px solid #ffcbcb;
+  cursor: pointer;
+}
+
+.btn2>button:hover {
+  background-color: rgb(243, 138, 138);
+}
+
+.check {
+  margin-top: 25px;
+}
+
+.te {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sr {
+  width: 20%;
+  border-radius: 50%;
+}
