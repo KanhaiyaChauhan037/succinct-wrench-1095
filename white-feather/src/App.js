@@ -2,7 +2,7 @@ import Home from "./Pages/Home";
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Login from './Components/Login/Login'
-import {CheckoutForm} from './Pages/Address';
+// import {CheckoutForm} from './Pages/Address';
 // import Delivery from './Pages/Address';
 import AllRoutes from './Routes/AllRoutes';
 import MyBag from "./Components/MyBag"
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Login />
       <Home />
-      <CheckoutForm/>
+      {/* <CheckoutForm/> */}
        <CheckOut/>
         {/* <Delivery/> */}
       <AllRoutes />
