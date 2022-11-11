@@ -14,9 +14,9 @@ const MyBag = () => {
     
 
           
-            <ChakraProvider>
+          
             <MyBagNavbar />
-            </ChakraProvider>
+          
         </div>
     )
 }
