@@ -28,38 +28,35 @@ function MyBagNavbar() {
     return (
         <div>
 
-            <Box border='2px' borderColor='gray.200' p="6px"  w={{ base: "100%", sm: "100%", md: "100%", lg: "80%" }}
-      m="auto"
-      mb={"20px"}
-            
-            // height={{
-            //     base: '100%',
-            //     sm:"50", // 0-48em
-            //     md: '75%', // 48em-80em,
-            //     xl: '100%', // 80em+
-            //   }}
-            //   bg='teal.400'
-            //   width={[
-            //     '100%', // 0-30em
-            //     '50%', // 30em-48em
-            //     '75%', // 48em-62em
-            //     '100%', // 62em+
-            //   ]}
+            <Box border='2px' borderColor='gray.200' p="6px" w={{ base: "100%", sm: "100%", md: "100%", lg: "80%" }}
+                m="auto"
+                mb={"20px"}
+
+                height="100px"
+
+
+
+                width={[
+                    '100%', // 0-30em
+                    '50%', // 30em-48em
+                    '75%', // 48em-62em
+                    '100%', // 62em+
+                ]}
 
                 display="flex" gap="1%"
                 alignItems="center"
-                //  fontfamily: sans-serif;
+
                 fontFamily="sans-serif"
 
             >
-                <Box ml="6%">
+                <Box ml="6%" mt="1%">
                     <Image src='https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg' alt='m_logo'
                         objectFit="cover" />
                 </Box>
 
 
 
-                <Box h="70%" w="65%" 
+                <Box h="70%" w="65%"
                 >
                     <Slider
                         id='slider'
@@ -103,7 +100,7 @@ function MyBagNavbar() {
                 <Box display="flex">
                     <Menu  >
                         <Image src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
-                            alt="" w="20px"  />
+                            alt="" w="20px" />
                         <MenuButton ml="5px">
                             Users
 
