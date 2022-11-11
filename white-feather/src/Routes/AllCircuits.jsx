@@ -8,7 +8,7 @@ import Cart from "./Cart";
 
 // all the routing using the routing library should be done from here; 
 
-const AllRoutes = () => {
+const AllCircuits = () => {
   return <Routes>
     <Route path="/" element={<Home />}/>
       <Route path="/makeup" element={<Makeup />}/>
@@ -17,4 +17,4 @@ const AllRoutes = () => {
     </Routes>
 }
 
-export default AllRoutes;
+export default AllCircuits;

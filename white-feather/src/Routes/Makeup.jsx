@@ -7,7 +7,8 @@ import SingleProductCard from "../Components/SingleProductCard";
 const Makeup = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading ] = useState(false)
-//   const navigate = useNavigate()
+//   const navigate = useNavigate();
+
   useEffect(()=>{
     setLoading(true)
     axios.get("https://whitefeather123.herokuapp.com/data")

@@ -33,6 +33,11 @@ const SingleProduct = () => {
 
   return (
     <>
+    {
+      loading && <div className={Styles.loader}>
+      	  <div className={Styles.spinner}></div>
+        </div>
+    }
     <Flex border="1px solid red" justifyContent="center" gap="35px" >
     <Box>
       <Img src={data.image} className={Styles.pic}/>
@@ -43,7 +48,7 @@ const SingleProduct = () => {
       <Text fontWeight={"bold"} lineHeight="50px" fontSize={"20px"}>{data.title}</Text>
       <Text lineHeight="65px" fontSize={"22px"}>{data.rating}2802 ratings</Text>
       <Text lineHeight="50px" fontSize={"18px"} color="grey">{data.shade}</Text>
-      <Text lineHeight="75px" fontSize={"22px"}>{data.price}</Text>
+      <Text lineHeight="75px" fontSize={"30px"}>{data.price}</Text>
       <Button bg="black" size='lg' variant="solid" colorScheme="white"  fontSize={"20px"} leftIcon={<BsBag />} p="25px">ADD To BAG</Button> <br/>
       <Button mt="25px" fontSize={"14px"} bg="#fee8e8">You will receive <b>cashback worth ₹60 </b> as myglammPOINTS on this purchase</Button>
     </Box>

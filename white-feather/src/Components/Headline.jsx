@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // 2. On the left hand side; If the user has logged in; Token should be displated; else Token shouldn't be shown.
 // 3. on the right hand side; There will be there different links. `HOME` `LOGIN` `CART`
 
-const Navbar = () => {
+const Headline = () => {
   return (
     <Flex alignItems="center" justifyContent="end" gap="10px" p="5px" bg="cyan">
       
@@ -24,4 +24,4 @@ const Navbar = () => {
   )
 };
 
-export default Navbar;
+export default Headline;
