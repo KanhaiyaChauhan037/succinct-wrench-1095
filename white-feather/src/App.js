@@ -8,19 +8,21 @@ import AllRoutes from './Routes/AllRoutes';
 import MyBag from "./Components/MyBag"
 import {AddressPage} from './Pages/Address';
 import CheckOut  from './Pages/CheckOut';
+import MainFooter from "./Components/MainFooter";
 
 function App() {
   return (
    <div className="App">
       <Navbar />
-      <AllRoutes />
-      <LoginPopUp />
+       <AllRoutes />
+       <LoginPopUp />
       <Home />
-      {/* <CheckoutForm/> */}
+       {/* <CheckoutForm/> */}
        {/* <CheckOut/> */}
-        {/* <Delivery/> */}
+         {/* <Delivery/>  */}
       {/* <MyBag/> */}
-      {/* <AddressPage/> */}
+      {/* <AddressPage/>  */}
+      {/* <MainFooter/> */}
     </div>
   );
 }
