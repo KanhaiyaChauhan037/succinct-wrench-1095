@@ -20,7 +20,7 @@ function App() {
        {/* <AllRoutes /> */}
       {/* <MyBag/> */}
       {/* <AddressPage/>  */}
-      <MainFooter/>
+      {/* <MainFooter/> */}
     </div>
   );
 }
