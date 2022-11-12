@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import MyBag from "./Components/MyBag"
 import {AddressPage} from './Pages/Address';
 import CheckOut  from './Pages/CheckOut';
+import MainFooter from "./Components/MainFooter";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        {/* <AllRoutes /> */}
       {/* <MyBag/> */}
       {/* <AddressPage/>  */}
+      {/* <MainFooter/> */}
     </div>
   );
 }
