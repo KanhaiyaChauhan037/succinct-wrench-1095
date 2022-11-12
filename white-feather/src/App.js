@@ -9,10 +9,22 @@ import MyBag from "./Components/MyBag"
 import {AddressPage} from './Pages/Address';
 import CheckOut  from './Pages/CheckOut';
 import MainFooter from "./Components/MainFooter";
+import { useState,useEffect } from 'react';
+import Loader from './Components/Loader/Loader';
 
 function App() {
-  return (
-   <div className="App">
+  const [loading,setLoading] = useState(true)
+  useEffect(() => {
+    const t = setTimeout(()=>{
+      setLoading(false)
+    },3000)
+  
+    return () => {
+      clearTimeout(t);
+    }
+  }, [])
+  return  loading? <Loader />: (
+   <>
       <Navbar />
        <AllRoutes />
        <LoginPopUp />
@@ -23,7 +35,7 @@ function App() {
       {/* <MyBag/> */}
       {/* <AddressPage/>  */}
       {/* <MainFooter/> */}
-    </div>
+    </>
   );
 }
 export default App;
