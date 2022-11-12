@@ -19,7 +19,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://localdatawhitefeather.herokuapp.com/data/${id}`)
+    axios.get(`https://whitefeather2.herokuapp.com/data/${id}`)
     .then((res) => {
       console.log(res.data);
       setData(res.data);
