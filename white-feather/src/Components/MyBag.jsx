@@ -1,6 +1,7 @@
 import React from 'react'
 import MyBagNavbar from './MyBagNavbar'
-import { ChakraProvider } from '@chakra-ui/react'
+
+import  MyBagMainFile  from './MyBagMainFile'
 
 
 const MyBag = () => {
@@ -10,13 +11,13 @@ const MyBag = () => {
 
     return (
         <div>
-         
-    
 
-          
-            <ChakraProvider>
+
+
+
+
             <MyBagNavbar />
-            </ChakraProvider>
+            <MyBagMainFile />
         </div>
     )
 }
