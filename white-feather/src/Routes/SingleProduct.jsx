@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 import axios from "axios";
 import { useEffect } from 'react';
-import { useParams ,useNavigate, NavLink } from 'react-router-dom';
+import { useParams , NavLink } from 'react-router-dom';
 import { Box, Img, Text,Flex,Button } from '@chakra-ui/react';
 import Styles from "../Css/Makeup.module.css";
 import { BsBag } from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
-import { IoLogoTwitter } from 'react-icons/io';
-import { AiFillInstagram } from 'react-icons/ai';
 import { useCart } from 'react-use-cart';
 
 const SingleProduct = () => {
@@ -42,7 +39,7 @@ const SingleProduct = () => {
       	  <div className={Styles.spinner}></div>
         </div>
     }
-    <Flex  justifyContent={["center","center","center","center"]} gap="45px"  flexDirection={["column","column","row","row"]}>
+    <Flex  justifyContent={["center","center","center","center"]} gap="45px"  flexDirection={["column","column","column","row"]}>
       <Box >
         <Img src={data.image}  h="450px"/>
       </Box>
@@ -55,26 +52,16 @@ const SingleProduct = () => {
         <Text lineHeight="90px" fontSize={"30px"}>₹{data.price}</Text>
         <NavLink to="/cart">
         <Button
-        onClick = {()=>addItem(data)}
-        bg="black" size='lg' variant="solid" colorScheme="white"  fontSize={"20px"} p="25px" leftIcon={<BsBag />} >
-            ADD To BAG
+          onClick = {()=>addItem(data)}
+          bg="black" size='lg' variant="solid" colorScheme="white"  fontSize={"20px"} p="25px" leftIcon={<BsBag />} >
+              ADD To BAG
           </Button> 
         </NavLink> 
         <br/>
-        <Flex mt="20px">
-        <Box ml="-370px" >
-          <Button variant="outline" mt="25px" gap="40px" _hover={{bg:"gold"}}><FaFacebookF /></Button>
-          <Button variant="outline" mt="25px" gap="40px"  _hover={{bg:"gold"}}><IoLogoTwitter /></Button>
-          <Button variant="outline" mt="25px" gap="40px"  _hover={{bg:"gold"}}><AiFillInstagram/></Button>
+        <Box mt="25px" fontSize={"22px"} bg="#fee8e8" lineHeight="80px" textAlign="center" p="20px">
+          <Text >You will receive &nbsp;<b>cashback worth ₹60 </b>&nbsp;as myglamm <b>POINTS</b> on this purchase</Text>
         </Box>
-        <Box ml="100px">
-          <Button mt="25px" fontSize={"14px"} bg="#fee8e8" lineHeight="80px" >
-            You will receive &nbsp;<b>cashback worth ₹60 </b> &nbsp; as myglammPOINTS on this purchase
-          </Button>
-        </Box>
-        </Flex>
-      
-     </Box>
+      </Box>
     </Flex>
 
     </>

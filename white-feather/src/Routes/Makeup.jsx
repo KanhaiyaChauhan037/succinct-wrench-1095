@@ -36,7 +36,7 @@ const Makeup = () => {
         {data &&
           data.map((item) => {
             return (
-              <Box >
+              <Box key={item.id}>
                 <Stack className={Styles.Stack}>
                   <SingleProductCard key={item.id}
                     image={item.image}
