@@ -66,12 +66,12 @@ const Navbar = () => {
             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
             <div className="lineDiv"></div>
             {
-              checkVal?(
+              user?.email?(
               <div className="accountName">
                 <div>
                   <button id="accountName-btn" onClick={accountNameDrop}>
                   {
-                    checkVal
+                    user?.email
                   }
                   <IoMdArrowDropdown className="accountName-icon" />
                   </button>

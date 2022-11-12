@@ -1,7 +1,7 @@
 import Home from "./Pages/Home";
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
-import Login from './Components/Login/Login'
+import LoginPopUp from './Components/Login/LoginPopUp'
 // import {CheckoutForm} from './Pages/Address';
 // import Delivery from './Pages/Address';
 import AllRoutes from './Routes/AllRoutes';
@@ -14,7 +14,7 @@ function App() {
    <div className="App">
       <Navbar />
       <AllRoutes />
-      <Login />
+      <LoginPopUp />
       <Home />
       {/* <CheckoutForm/> */}
        {/* <CheckOut/> */}
