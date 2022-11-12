@@ -33,23 +33,6 @@ export const AddressPage = () => {
         <Box className='main' >
             {/* Navbar Part  */}
 
-            <Box className='nub'>
-                <Box className='nubl'>
-                    <Image className='sr' src={logoo} />
-                    </Box>
-
-                <Box>
-                    <Stack spacing={3}>
-                        <Select placeholder='User Accout' size="md">
-                            <option>My Profile</option>
-                            <option>My Order</option>
-                            <option>My Dashboard</option>
-                            <option>My GlammOX Party</option>
-                            <button>dffdfdf</button>
-                        </Select>
-                    </Stack>
-                </Box>
-            </Box>
 
             <Box className='bord'>
                 <Box className='formC'>

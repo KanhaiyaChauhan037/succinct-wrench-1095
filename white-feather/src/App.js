@@ -1,6 +1,6 @@
 import Home from "./Pages/Home";
 import './App.css';
-import {CheckoutForm} from './Pages/Address';
+// import {AddressPage} from './Pages/Address';
 // import Delivery from './Pages/Address';
 import AllRoutes from './Routes/AllRoutes';
 import Navbar from './Components/Navbar';
@@ -8,17 +8,20 @@ import MyBag from "./Components/MyBag"
 import {AddressPage} from './Pages/Address';
 import CheckOut  from './Pages/CheckOut';
 
+import Payment from "./Pages/Payment";
+
 function App() {
   return (
    <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <Home />
-      <CheckoutForm/>
+      <AddressPage/>
        <CheckOut/>
-        {/* <Delivery/> */}
+        <Delivery/>
       <AllRoutes />
       <MyBag/>
-      {/* <AddressPage/> */}
+      <AddressPage/> */}
+      <Payment/>
     </div>
   );
 }
