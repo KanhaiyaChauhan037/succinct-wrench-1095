@@ -36,7 +36,7 @@ const getproductLoad = () => {
 export const getData = () => async (dispatch) => {
   try {
     dispatch(getproductLoad());
-    let res = await axios.get("https://whitefeather123.herokuapp.com/data");
+    let res = await axios.get("https://localdatawhitefeather.herokuapp.com/data");
     dispatch(getproductSucess(res.data));
   } catch (error) {
     dispatch(getproductError());
@@ -47,7 +47,7 @@ export const getSingleData = (id) => async (dispatch) => {
   try {
     dispatch(getproductLoad());
     let res = await axios.get(
-      `https://whitefeather123.herokuapp.com/data/${id}`
+      `https://localdatawhitefeather.herokuapp.com/data/${id}`
     );
     dispatch(getSingleproductSucess(res.data));
     return;
@@ -59,19 +59,19 @@ export const getSingleData = (id) => async (dispatch) => {
 export const postData = async (data) => {
   try {
     let res = await axios.post(
-      "https://whitefeather123.herokuapp.com/data",
+      "https://localdatawhitefeather.herokuapp.com/data",
       data
-    );
-    return true;
+    );    
+    return true
   } catch (error) {
-    return false;
+    return false
   }
 };
 
 export const deleteData = async (id) => {
   try {
     let res = await axios.delete(
-      `https://whitefeather123.herokuapp.com/data/${id}`
+      `https://localdatawhitefeather.herokuapp.com/data/${id}`
     );
     return true;
   } catch (error) {
@@ -82,7 +82,7 @@ export const deleteData = async (id) => {
 export const updateData = async (id, data) => {
   try {
     let res = await axios.patch(
-      `https://whitefeather123.herokuapp.com/data/${id}`,
+      `https://localdatawhitefeather.herokuapp.com/data/${id}`,
       data
     );
     return true;

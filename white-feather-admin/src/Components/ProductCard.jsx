@@ -3,7 +3,11 @@ import React from "react";
 import { BiEditAlt } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
-export default function ProductCard({ img, name, desc, shade, price, id }) {
+export default function ProductCard({ img, name, desc, shade, price, id, del}) {
+
+  let handleClick=(id)=>{
+    del(id)
+  }
   return (
     <Box
       display={"flex"}
@@ -30,9 +34,9 @@ export default function ProductCard({ img, name, desc, shade, price, id }) {
         </Text>
       </Box>
       <HStack justifyContent={"center"} w="100%">
-        <Text as={"b"}>{shade}</Text>
+        <Text as={"b"}>{shade} SHADES</Text>
         <Divider orientation="vertical" borderColor={"black"} h="25px" />
-        <Text as={"b"}>{price}</Text>
+        <Text as={"b"}>₹{price}</Text>
       </HStack>
       <HStack justifyContent={"center"} w="100%">
         <Link to={`/${id}`}>
@@ -43,7 +47,7 @@ export default function ProductCard({ img, name, desc, shade, price, id }) {
             </HStack>
           </Button>
         </Link>
-        <Button bg={"transparent"}>
+        <Button bg={"transparent"} onClick={()=>handleClick(id)}>
           <HStack>
             <Text color="red">Delete</Text>
             <RiDeleteBin6Line color="red" />

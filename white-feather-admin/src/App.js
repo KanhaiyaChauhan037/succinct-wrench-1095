@@ -1,16 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import {Navbar, NavbarMob} from './Components/Navbar';
-import AllProduct from './Pages/AllProduct';
-import AllRoutes from './Pages/AllRoutes';
+import "./App.css";
+import AllRoutes from "./Pages/AllRoutes";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
+  const navigate = useNavigate();
+  let isAuth = localStorage.getItem("isAuth") || null;
+
+  useEffect(() => {
+    isAuth = localStorage.getItem("isAuth");
+    if (isAuth == "false" || isAuth == null) {
+      navigate("/login");
+    }
+  }, [isAuth]);
+
   return (
     <div className="App">
-      <Navbar/>
-      <NavbarMob/>
-      {/* <AllProduct/> */}
-      <AllRoutes/>
+      <AllRoutes />
     </div>
   );
 }
