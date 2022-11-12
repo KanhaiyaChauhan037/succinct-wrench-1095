@@ -12,7 +12,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 export default function AllProduct() {
   const { isError, isLoading, data } = useSelector((store) => store.prod);
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  
 
   useEffect(() => {
     dispatch(getData());
@@ -23,19 +23,7 @@ export default function AllProduct() {
     alert("Product deleted successfully");
   };
 
-  // useEffect(() => {
-  //   console.log( typeof isAuth);
-  //   if (isAuth == false) {
-  //     navigate("/login");
-  //   }
-  // }, [isAuth]);
-
-
-  // if (isAuth == false) {
-  //   navigate("/login");
-  //   return  <Navigate to="/login"/>
-  // }
-
+  
   return (
     <>
       <Navbar />
@@ -57,6 +45,7 @@ export default function AllProduct() {
         justifyContent="center"
       >
         {isLoading ? <Spinner size="xl" /> : null}
+        {isError? <Text>Something Went Wrong</Text>:null}
       </Box>
       <Box w={{ base: "96%", sm: "96%", md: "96%", lg: "80%" }} m="auto">
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gap="20px">

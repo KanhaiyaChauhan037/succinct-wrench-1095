@@ -112,7 +112,7 @@ export default function UpdateProduct() {
             <Box w="100%">
               <FormLabel>Enter Shades</FormLabel>
               <Input
-                type="number"
+                type="text"
                 name="shade"
                 value={shade}
                 onChange={handleChange}

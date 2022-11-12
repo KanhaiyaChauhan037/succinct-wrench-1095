@@ -28,9 +28,9 @@ export default function Login() {
   };
   return (
     <Box
-      w={{ base: "95%", sm: "95%", md: "80%", lg: "40%" }}
-      border="1px solid red"
+      w={{ base: "95%", sm: "95%", md: "80%", lg: "40%" }}      
       m="auto"
+      mt="60px"
     >
       <Box w="100%" textAlign={"center"}>
         <Text fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }} as="b">

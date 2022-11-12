@@ -34,7 +34,7 @@ export default function ProductCard({ img, name, desc, shade, price, id, del}) {
         </Text>
       </Box>
       <HStack justifyContent={"center"} w="100%">
-        <Text as={"b"}>{shade} SHADES</Text>
+        <Text as={"b"}>{shade}</Text>
         <Divider orientation="vertical" borderColor={"black"} h="25px" />
         <Text as={"b"}>₹{price}</Text>
       </HStack>
