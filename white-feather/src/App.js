@@ -1,8 +1,7 @@
 import Home from "./Pages/Home";
 import './App.css';
-import Navbar from './Components/Navbar/Navbar'
-import LoginPopUp from './Components/Login/LoginPopUp'
-// import {CheckoutForm} from './Pages/Address';
+
+
 // import Delivery from './Pages/Address';
 import AllRoutes from './Routes/AllRoutes';
 import MyBag from "./Components/MyBag"
@@ -10,19 +9,23 @@ import {AddressPage} from './Pages/Address';
 import CheckOut  from './Pages/CheckOut';
 import MainFooter from "./Components/MainFooter";
 
+import Payment from "./Pages/Payment";
+
 function App() {
   return (
    <div className="App">
-      <Navbar />
-       <AllRoutes />
-       <LoginPopUp />
+
+      {/* <Navbar />
       <Home />
-       {/* <CheckoutForm/> */}
-       {/* <CheckOut/> */}
-         {/* <Delivery/>  */}
-      {/* <MyBag/> */}
-      {/* <AddressPage/>  */}
-      {/* <MainFooter/> */}
+      <AddressPage/>
+       <CheckOut/>
+        <Delivery/>
+      <AllRoutes />
+      <MyBag/>
+      <AddressPage/> */}
+      <Payment/>
+=======
+     
     </div>
   );
 }
