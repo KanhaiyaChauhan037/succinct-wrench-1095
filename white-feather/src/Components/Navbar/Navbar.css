@@ -99,6 +99,9 @@ p{
     padding: 0.2rem 0.4rem;
     border-radius: 5px;
 }
+.hide{
+    display: none;
+}
 .show{
     display: flex;
 }
@@ -190,6 +193,9 @@ p{
     border: 1px solid rgb(219, 219, 219);
 
 }
+.adBannerMobileIcon{
+    display: none;
+}
 
 
 /* ============== MEDIUM DEVICES ============== */
@@ -217,5 +223,14 @@ p{
   
   /* ============== SMALL DEVICES ============== */
   @media screen and (max-width:600px){
+    .navbar{
+        display: none;
+    }
+    .ad-store-right{
+        display: none;
+    }
+    .adBannerMobileIcon{
+        display: block;
+    }
 
   }

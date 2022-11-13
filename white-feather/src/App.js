@@ -15,23 +15,32 @@ import './App.css';
 
 
 import Payment from "./Pages/Payment";
+import { useState,useEffect } from 'react';
+import Loader from './Components/Loader/Loader';
+import MobNav from './Components/MobNavbar/MobNav'
+
+
 
 function App() {
-  return (
-    <div className="App">
+  const [loading,setLoading] = useState(true)
+  useEffect(() => {
+    const t = setTimeout(()=>{
+      setLoading(false)
+    },3000)
+  
+    return () => {
+      clearTimeout(t);
+    }
+  }, [])
+  return  loading? <Loader />: (
+   <>
       <Navbar />
-       {/* <Headline /> */}
-     {/* <AllCircuits /> */}
-      {/* <CheckoutForm/> */}
-      {/* <CheckOut/> */}
-      {/* <Delivery/>  */}
-      <AllRoutes />
-      {/* <MyBag/> */}
-      {/* <AddressPage/>  */}
-      {/* Keep this both file for responsive footer */}
-      <MainFooter/>
+      <MobNav />
+       <AllRoutes />
+       <LoginPopUp />
+       <MainFooter/>
       <MainFooterMob/>
-    </div>
+    </>
   );
 }
 export default App;
