@@ -12,7 +12,7 @@ import { MainFooter, MainFooterMob } from "./Components/MainFooter";
 import './App.css';
 // import Headline from './Components/Headline';
 // import AllCircuits from './Routes/AllCircuits';
-
+import LoginPopUp from "./Components/Login/LoginPopUp"
 
 import Payment from "./Pages/Payment";
 import { useState,useEffect } from 'react';
