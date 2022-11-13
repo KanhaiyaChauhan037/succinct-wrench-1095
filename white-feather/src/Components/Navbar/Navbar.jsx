@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { BiSearchAlt2, BiStoreAlt } from "react-icons/bi";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdClose } from "react-icons/io";
 import { HiGift } from "react-icons/hi";
 import { BsPerson, BsBag } from "react-icons/bs";
 import { Image,Heading,HStack,Text,Spacer } from "@chakra-ui/react";
@@ -32,10 +32,12 @@ const Navbar = () => {
     }
   },[user])
   const checkVal = user?.email || user
-  console.log(checkVal);
+  const adBanner = () =>{
+    document.getElementById("ad-store").classList.toggle("hide");
+  }
   return (
     <>
-      <div className="ad-store">
+      <div className="ad-store" id="ad-store">
         <div className="ad-store-left">
           <HiGift color="#faa8a8" />
           <p>Pick Any Product at Rs 199</p>
@@ -44,7 +46,9 @@ const Navbar = () => {
         <div className="ad-store-right">
           <BiStoreAlt />
           <p>White Feather Store</p>
+          <IoMdClose style={{color:'#db1d65',fontSize:'1.2rem',cursor:'pointer'}} onClick={adBanner} />
         </div>
+          <IoMdClose className="adBannerMobileIcon" style={{color:'#db1d65',fontSize:'1.2rem',cursor:'pointer'}} onClick={adBanner} />
       </div>
       <div className="navbar">
         <div className="navbar-top">

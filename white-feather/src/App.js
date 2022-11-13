@@ -11,6 +11,7 @@ import CheckOut  from './Pages/CheckOut';
 import MainFooter from "./Components/MainFooter";
 import { useState,useEffect } from 'react';
 import Loader from './Components/Loader/Loader';
+import MobNav from './Components/MobNavbar/MobNav'
 
 function App() {
   const [loading,setLoading] = useState(true)
@@ -26,6 +27,7 @@ function App() {
   return  loading? <Loader />: (
    <>
       <Navbar />
+      <MobNav />
        <AllRoutes />
        <LoginPopUp />
       <Home />
