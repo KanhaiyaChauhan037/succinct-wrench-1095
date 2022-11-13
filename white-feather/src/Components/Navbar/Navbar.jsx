@@ -9,6 +9,7 @@ import { AppContext } from '../../Context/AppContextProvider'
 import { AuthContext } from '../../Context/AuthContextProvider'
 import { useContext } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 /* #262726 #fafafa */
 const Navbar = () => {
@@ -52,12 +53,14 @@ const Navbar = () => {
       </div>
       <div className="navbar">
         <div className="navbar-top">
+        <Link to='/'>
           <Image
             src="https://i.ibb.co/Jtvk4Lf/White-Feather.png"
             alt="White-Feather-Logo"
             boxSize="90px"
             objectFit="cover"
           />
+          </Link>
           <div className="inputDiv">
             <BiSearchAlt2 color="#a3a8b1" size="1.6rem" />
             <input
@@ -67,7 +70,9 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar-icon">
+            <Link to='/cart'>
             <BsBag color="#fafafa" size="1.5rem" className="bagIcon" />
+            </Link>
             <div className="lineDiv"></div>
             {
               checkVal?(
@@ -105,7 +110,7 @@ const Navbar = () => {
             <li class="nav-item has-dropdown">
               <li class="nav-item">
                 <button>
-                <a href="#">MAKEUP</a>
+                <Link to='/makeup'>MAKEUP</Link>
                 </button>
               </li>
               <div className="dropdown">
