@@ -18,15 +18,17 @@ import Payment from "./Pages/Payment";
 import { useState,useEffect } from 'react';
 import Loader from './Components/Loader/Loader';
 import MobNav from './Components/MobNavbar/MobNav'
+import LoginPopUp from './Components/Login/LoginPopUp'
 
 
 
 function App() {
-  const [loading,setLoading] = useState(true)
+  
+  const [loading,setLoading] = useState(false)
   useEffect(() => {
     const t = setTimeout(()=>{
       setLoading(false)
-    },3000)
+    },1000)
   
     return () => {
       clearTimeout(t);
