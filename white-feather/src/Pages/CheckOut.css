@@ -11,10 +11,7 @@
 }
 
 .Main>div:nth-child(1) {
-    /* background-color: gray; */
     width: 120%;
-    height: 650px;
-
 }
 
 
@@ -84,16 +81,13 @@
 
 .order-part-ab {
     display: flex;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     justify-content: space-between;
     align-items: center;
-padding: 10px;
-}
+    position:relative;
+    }
 
-.order-part-ab>img {
-    width: 70px;
 
-}
 
 .fetchpart-p {
     margin-bottom: 20px;

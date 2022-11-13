@@ -1,48 +1,29 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-<<<<<<< HEAD:white-feather/src/Routes/AllCircuits.jsx
 import { CartProvider } from "react-use-cart";
-import Home from "../Routes/Home";
 import Makeup from "../Routes/Makeup"
-=======
 import Home from "../Pages/Home";
-import Makeup from "../Routes/Makeup";
->>>>>>> e7aa4a2f2301e95efa6be312949767d84a465cea:white-feather/src/Routes/AllRoutes.jsx
 import SingleProduct from "../Routes/SingleProduct";
-import Cart from "./Cart";
+import Cart from "../Pages/Cart";
+import {Address} from "../Pages/Address";
+import CheckOutPage from '../Pages/CheckOut'
+import Payment from '../Pages/Payment'
 
 // all the routing using the routing library should be done from here;
 
-<<<<<<< HEAD:white-feather/src/Routes/AllCircuits.jsx
-const AllCircuits = () => {
-  return <Routes>
-    <Route path="/" element={<Home />}/>
-      <Route path="/makeup" element={<Makeup />}/>
-      <Route path="/cart" element={
-        <CartProvider>
-          <Cart />
-        </CartProvider>
-       }/>
-      <Route path="/singleproduct/:id" element={
-        <CartProvider>
-          <SingleProduct />
-        </CartProvider>
-      }/>
-=======
-const AllRoutes = () => {
-  return (
+    const AllRoutes = () => {
+      return (
+            
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/makeup" element={<Makeup />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/singleproduct/:id" element={<SingleProduct />} />
->>>>>>> e7aa4a2f2301e95efa6be312949767d84a465cea:white-feather/src/Routes/AllRoutes.jsx
+      <Route path="/address" element={<Address />} />
+      <Route path="/checkout" element={<CartProvider><CheckOutPage /></CartProvider>} />
+      <Route path="/payment" element={<CartProvider><Payment /></CartProvider>} />
+      <Route path="/cart" element={<CartProvider><Cart /></CartProvider>} />
+      <Route path="/singleproduct/:id" element={<CartProvider><SingleProduct /></CartProvider>} />
     </Routes>
   );
 };
 
-<<<<<<< HEAD:white-feather/src/Routes/AllCircuits.jsx
-export default AllCircuits;
-=======
 export default AllRoutes;
->>>>>>> e7aa4a2f2301e95efa6be312949767d84a465cea:white-feather/src/Routes/AllRoutes.jsx

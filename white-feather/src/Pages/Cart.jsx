@@ -4,8 +4,10 @@ import { useCart } from 'react-use-cart';
 // import MyBag from "../Components/MyBag"
 import {GiTireIronCross} from 'react-icons/gi';
 import {GrSubtract ,GrAdd} from "react-icons/gr";
+import {useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+  const navigate = useNavigate()
   
    const {
     isEmpty,
@@ -21,7 +23,9 @@ const Cart = () => {
     // console.log(cartTotal)
   return (
     <>
+    <Box w='100%' m='auto' textAlign='center' mt='20px'>
      <Text fontWeight="medium" fontSize={"35px"}>MY BAG ({totalUniqueItems})</Text> 
+    </Box>
     {
       (isEmpty) && <Box>
         <Box><Text fontSize={"40px"} mt="25px">Oops! Your bag is empty!</Text></Box>
@@ -29,7 +33,7 @@ const Cart = () => {
       </Box>
     }
    
-   <Table maxWidth={["100%","100%","100%","70%"]} m="auto" colorScheme="purple" mt="30px" display={["flex"]}>
+   <Table maxWidth="80%" m="auto" colorScheme="purple" mt="30px" display={["flex"]}>
         <Tbody>
           {
             items.map((item,index)=>{
@@ -76,7 +80,7 @@ const Cart = () => {
           <Text fontWeight={"bold"}  fontSize="20px">₹{cartTotal}</Text>
         </Flex>
       </Flex>
-      <Button bg="black" size='lg' variant="solid" colorScheme="white"  fontSize={"25px"} p="35px" mt="40px">PROCEED TO CHECKOUT</Button>
+      <Button m='auto' display='block' bg="black" size='lg' variant="solid" colorScheme="white"  fontSize={"22px"} px='20px' pt='5px' mt='20px' onClick={()=>navigate('/address')}>PROCEED TO CHECKOUT</Button>
     </>
   )
 }

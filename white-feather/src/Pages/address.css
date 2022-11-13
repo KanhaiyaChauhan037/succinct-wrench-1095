@@ -1,3 +1,4 @@
+
 .bord {
   border: 1px solid rgb(205, 200, 200);
   width: 90%;
@@ -39,7 +40,7 @@ margin-top: 1%;
   width: 45%;
   border-radius: 5px;
   border: 1px solid gray;
-
+  padding: 5px;
 
 
 
@@ -59,6 +60,7 @@ margin-top: 1%;
   height: 7vh;
   border-radius: 5px;
   border: 1px solid gray;
+  padding: 5px;
 }
 
 #hh>input:nth-child(2) {
@@ -71,9 +73,13 @@ margin-top: 1%;
   font-size: 16px;
   font-weight: bold;
   background-color: white;
-  color: #ffcbcb;
+  color: #f8acac;
   border: 1px solid #ffcbcb;
   cursor: pointer;
+}
+.btn-bs>button:hover{
+  background-color: #fa8080;
+  color: white;
 }
 
 .btn-bs {
@@ -100,16 +106,19 @@ Checkbox {
 .btn1 {
   display: flex;
   justify-content: right;
-
+  
 }
 
 .btn1>button {
-  background-color: #ffcbcb;
+  background-color: rgb(243, 138, 138);
   outline: none;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+}
+.btn1>button:hover{
+  background-color: rgb(247, 118, 118);
+
 }
 
 .btn2 {
@@ -142,6 +151,6 @@ Checkbox {
   border-radius: 50%;
 }
 .btn-ss>button:nth-child(1){
-  background-color: #ffcbcb;
+  background-color: rgb(243, 138, 138);
   color: white;
 }

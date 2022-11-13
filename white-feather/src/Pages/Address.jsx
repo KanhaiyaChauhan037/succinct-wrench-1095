@@ -7,13 +7,14 @@ import {
 import axios from "axios"
 
 import React, { useState } from "react";
+import {useNavigate } from 'react-router-dom';
 
 import "./address.css"
 
 
-export const AddressPage = () => {
+export const Address = () => {
 
-
+    const navigate = useNavigate()
     const [user, setUser] = useState({
         ad_name: "",
         ad_number: "",
@@ -26,6 +27,7 @@ export const AddressPage = () => {
 
 
 const  handleClick =()=> {
+    navigate('/checkout')
 
     localStorage.setItem("user",JSON.stringify(user));
 }
@@ -140,7 +142,7 @@ const  handleClick =()=> {
 
                     <Stack>
                         <Box className='btn-bs btn2'>
-                            <button>Back</button>
+                            <button onClick={()=>navigate('/cart')}>Back</button>
                         </Box>
                     </Stack>
                     <Box className='btn1'>

@@ -3,8 +3,8 @@ import Home from "./Pages/Home";
 import "./App.css";
 // import {CheckoutForm} from './Pages/Address';
 // import Delivery from './Pages/Address';
-import AllRoutes from "./Routes/AllRoutes";
-import Navbar from "./Components/Navbar";
+import AllRoutes from "./Routes/AllCircuits";
+import Navbar from "./Components/Navbar/Navbar";
 import MyBag from "./Components/MyBag";
 import { AddressPage } from "./Pages/Address";
 import CheckOut from "./Pages/CheckOut";
@@ -19,19 +19,18 @@ import Payment from "./Pages/Payment";
 function App() {
   return (
     <div className="App">
+      <Navbar />
        {/* <Headline /> */}
      {/* <AllCircuits /> */}
-      <Navbar />
-      <Home />
       {/* <CheckoutForm/> */}
       {/* <CheckOut/> */}
       {/* <Delivery/>  */}
-      {/* <AllRoutes /> */}
+      <AllRoutes />
       {/* <MyBag/> */}
       {/* <AddressPage/>  */}
       {/* Keep this both file for responsive footer */}
-      {/* <MainFooter/> */}
-      {/* <MainFooterMob/> */}
+      <MainFooter/>
+      <MainFooterMob/>
     </div>
   );
 }
