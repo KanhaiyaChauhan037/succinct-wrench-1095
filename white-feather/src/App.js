@@ -18,7 +18,7 @@ import Payment from "./Pages/Payment";
 import { useState,useEffect } from 'react';
 import Loader from './Components/Loader/Loader';
 import MobNav from './Components/MobNavbar/MobNav'
-import LoginPopUp from './Components/Login/LoginPopUp'
+
 
 
 

@@ -38,8 +38,6 @@ const Price = localStorage.getItem("price") || null;
 
   return (
     <Box>
-      dfdf
-      <hr />
       <Box>
         <Text align="center" fontSize="28px" fontWeight="600">
           Payment
