@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { CartProvider } from "react-use-cart";
 import Makeup from "../Routes/Makeup"
 import Home from "../Pages/Home";
@@ -8,11 +8,13 @@ import Cart from "../Pages/Cart";
 import {Address} from "../Pages/Address";
 import CheckOutPage from '../Pages/CheckOut'
 import Payment from '../Pages/Payment'
+import PrivateRouter from './PrivateRouter'
+import { useNavigate } from "react-router-dom";
 
 // all the routing using the routing library should be done from here;
 
     const AllRoutes = () => {
-      return (
+  return (
             
     <Routes>
       <Route path="/" element={<Home />} />

@@ -56,6 +56,7 @@ function BasicUsage() {
     try {
       await confirmObj.confirm(otp)
       setUser(number)
+
     } catch (error) {
       console.log(error);
       alert("Invalid OTP")
@@ -66,6 +67,7 @@ function BasicUsage() {
     e.preventDefault();
     try {
       googleSignIn();
+      localStorage.setItem('isAuth',true)
     } catch (error) {
       console.log(error);
     }
