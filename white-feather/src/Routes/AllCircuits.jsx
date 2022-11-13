@@ -10,6 +10,7 @@ import CheckOutPage from '../Pages/CheckOut'
 import Payment from '../Pages/Payment'
 import PrivateRouter from './PrivateRouter'
 import { useNavigate } from "react-router-dom";
+import Login from '../Pages/Login/Login'
 
 // all the routing using the routing library should be done from here;
 
@@ -18,6 +19,7 @@ import { useNavigate } from "react-router-dom";
             
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/makeup" element={<Makeup />} />
       <Route path="/address" element={<Address />} />
       <Route path="/checkout" element={<CartProvider><CheckOutPage /></CartProvider>} />

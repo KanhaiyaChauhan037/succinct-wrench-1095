@@ -56,6 +56,8 @@ function BasicUsage() {
     try {
       await confirmObj.confirm(otp)
       setUser(number)
+      setshowOtpPage(false)
+      setNumber("")
 
     } catch (error) {
       console.log(error);
@@ -67,7 +69,6 @@ function BasicUsage() {
     e.preventDefault();
     try {
       googleSignIn();
-      localStorage.setItem('isAuth',true)
     } catch (error) {
       console.log(error);
     }
@@ -79,6 +80,7 @@ function BasicUsage() {
   useEffect(()=>{
     if(user != null){
       onClose()
+      setNumber("")
     }
   },[user])
   return (

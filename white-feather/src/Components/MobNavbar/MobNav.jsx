@@ -22,11 +22,30 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiAccountPinCircleFill } from "react-icons/ri";
 import { BsBag } from "react-icons/bs";
 import "./MobNav.css";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../../Context/AuthContextProvider'
+import { useContext } from "react";
 
 function DrawerExample() {
+  const {user,logOut} = useContext(AuthContext)
+  const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
-
+  const redirectToLogin = () =>{
+    navigate('/login')
+    onClose()
+  }
+  const handleSignout = async () =>{
+    try {
+      await logOut();
+      onClose();
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+  const checkVal = user?.email || user
+  console.log(user);
   return (
     <div className="mobNavbar">
       <div className="mobNavbarShowBar">
@@ -47,13 +66,14 @@ function DrawerExample() {
         placement="left"
         initialFocusRef={firstField}
         onClose={onClose}
+        pb={5}
       >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader
             borderBottomWidth="1px"
-            style={{ backgroundColor: "#fee9e9" }}
+            style={{ backgroundColor: "#fee9e9" }} onClick={redirectToLogin}
           >
             <Stack spacing={4} mt={2}>
               <HStack align="center">
@@ -63,7 +83,9 @@ function DrawerExample() {
                 />
                 <div>
                   <p>Welcome,</p>
-                  <h2>Login/Signup</h2>
+                  {
+                    checkVal?<h2>{checkVal}</h2>:<h2>Login/Signup</h2>
+                  }
                 </div>
               </HStack>
               <Spacer />
@@ -94,6 +116,32 @@ function DrawerExample() {
                 <h2>
                   <AccordionButton>
                     <Box flex="1" textAlign="left">
+                      Shop by Brand
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                    <Stack spacing={2}>
+
+                    <a href="#">LIT</a>
+                    <a href="#">Manish Malhotra</a>
+                    <a href="#">POPxo</a>
+                    <a href="#">Superfood</a>
+                    <a href="#">POSE</a>
+                    <a href="#">Wipeout</a>
+                    <a href="#">K.play</a>
+                    <a href="#">GLOW</a>
+                    <a href="#">YOUTHfull</a>
+                    <a href="#">White-Feather</a>
+                    </Stack>
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
                       Shop by Category
                     </Box>
                     <AccordionIcon />
@@ -113,13 +161,9 @@ function DrawerExample() {
               </AccordionItem>
             </Accordion>
           </DrawerBody>
-
-          {/* <DrawerFooter borderTopWidth="1px">
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Submit</Button>
-          </DrawerFooter> */}
+            <div style={{display:'flex',justifyContent:'center'}}>
+            <Button onClick={handleSignout} colorScheme="red" mb={5}>Log Out</Button>
+            </div>
         </DrawerContent>
       </Drawer>
     </div>

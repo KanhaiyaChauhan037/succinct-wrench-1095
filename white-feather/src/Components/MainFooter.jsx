@@ -453,6 +453,7 @@ export function MainFooterMob() {
       bg="black"
       color={"white"}
       py="30px"
+      mt='2rem'
     >
       <VStack gap={"10px"} w="90%" m="auto" mb="40px">
         <Box textAlign={"left"} w="100%">
