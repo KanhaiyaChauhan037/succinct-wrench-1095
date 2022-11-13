@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import Home from "./Pages/Home";
+
+import "./App.css";
+// import {CheckoutForm} from './Pages/Address';
+// import Delivery from './Pages/Address';
+import AllRoutes from "./Routes/AllCircuits";
+import Navbar from "./Components/Navbar/Navbar";
+import MyBag from "./Components/MyBag";
+import { AddressPage } from "./Pages/Address";
+import CheckOut from "./Pages/CheckOut";
+import { MainFooter, MainFooterMob } from "./Components/MainFooter";
 import './App.css';
+// import Headline from './Components/Headline';
+// import AllCircuits from './Routes/AllCircuits';
+import LoginPopUp from "./Components/Login/LoginPopUp"
+
+import Payment from "./Pages/Payment";
+import { useState,useEffect } from 'react';
+import Loader from './Components/Loader/Loader';
+import MobNav from './Components/MobNavbar/MobNav'
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+  const [loading,setLoading] = useState(false)
+  useEffect(() => {
+    const t = setTimeout(()=>{
+      setLoading(false)
+    },1000)
+  
+    return () => {
+      clearTimeout(t);
+    }
+  }, [])
+  return  loading? <Loader />: (
+   <>
+      <Navbar />
+      <MobNav />
+       <AllRoutes />
+       <LoginPopUp />
+       <MainFooter/>
+      <MainFooterMob/>
+    </>
   );
 }
-
 export default App;

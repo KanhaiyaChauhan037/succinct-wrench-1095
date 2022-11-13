@@ -1,0 +1,22 @@
+.mobNavbar{
+    display: none;
+}
+.mobNavbarShowBar{
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem ;
+    justify-content: space-between;
+}
+
+/* ============== MEDIUM DEVICES ============== */
+@media screen and (max-width:1024px){
+
+  }
+  
+  /* ============== SMALL DEVICES ============== */
+  @media screen and (max-width:600px){
+    .mobNavbar{
+        display: flex;
+    }
+
+  }
