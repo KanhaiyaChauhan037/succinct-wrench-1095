@@ -10,15 +10,15 @@ import {
   Flex,
   Spacer,
   Input,
-  Container,Table,Tbody, Td,Tfoot, Th, Thead, Tr, Img
+  Container, Table, Tbody, Td, Tfoot, Th, Thead, Tr, Img
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useCart } from 'react-use-cart';
-  
+
 
 import "./CheckOut.css";
 import { useNavigate } from "react-router-dom";
-let promo="wf30"
+let promo = "wf30"
 const CheckOutPage = () => {
   const {
     isEmpty,
@@ -30,30 +30,40 @@ const CheckOutPage = () => {
     emptyCart
   } = useCart();
 
-  const [dis,setDis]= useState(0);
-  const [ap, setAp]=useState(cartTotal)
-  const AmountPay = 0
+  const [dis, setDis] = useState(0);
+  // const [ap, setAp] = useState(cartTotal)
+ 
 
-  console.log(items)
-const Discount=0
+  // console.log(items)
+ 
   const price = cartTotal;
   // let promoCode=()=>{
   //   if(promo==="wf30"){
   //     const coupon = Math.ceil((price * 30) / 100);
   //     setDis(coupon)
-  //     const AmountPay = Math.ceil(ap - (dis + Discount));
+  //    
   //     setAp(AmountPay)
 
   //   }
   // }
-  
+
+const handleClick=()=>{
+
+  localStorage.setItem("price",AmountPay)
+
+  navigate("/payment")
+
+}
+
   const navigate = useNavigate();
-// coupon=dis
+  // coupon=dis
 
-  // const Discount = Math.ceil((price * 30) / 100);
+  const Discount = Math.ceil((price * 20) / 100);
 
-  const coupon = Math.ceil((Discount * 30) / 100);
-  
+  const coupon = Math.ceil((price * 30) / 100);
+
+  const AmountPay = Math.ceil(price - (coupon + Discount));
+
 
   const Saved = Discount + coupon;
   const earn = Math.ceil((AmountPay * 2) / 100);
@@ -61,7 +71,7 @@ const Discount=0
 
   const User = JSON.parse(localStorage.getItem("user"));
 
-  console.log(User);
+  // console.log(User);
 
   return (
     <div className="mujhe">
@@ -123,30 +133,30 @@ const Discount=0
           </div>
 
           <div className="order-part-ab" >
-          <Table maxWidth="100%" m="auto" colorScheme="purple"  display={["flex"]}>
-        <Tbody>
-          {
-            items.map((item,index)=>{
-              return (
-                <Tr key={item.id}>
-                  <Td>
-                    <Img src={item.image} h="100px" w="100px"/>
-                  </Td>
-                  <Td fontSize={"20px"}>
-                    {item.product}
-                  </Td>
-                  <Td fontSize={"20px"}>
-                  ₹{item.price}
-                  </Td>
-                  <Td fontSize={"20px"}>
-                    {item.quantity} 
-                  </Td>
-                </Tr>
-              )
-            })
-          }
-        </Tbody>
-    </Table>
+            <Table maxWidth="100%" m="auto" colorScheme="purple" display={["flex"]}>
+              <Tbody>
+                {
+                  items.map((item, index) => {
+                    return (
+                      <Tr key={item.id}>
+                        <Td>
+                          <Img src={item.image} h="100px" w="100px" />
+                        </Td>
+                        <Td fontSize={"20px"}>
+                          {item.product}
+                        </Td>
+                        <Td fontSize={"20px"}>
+                          ₹{item.price}
+                        </Td>
+                        <Td fontSize={"20px"}>
+                          {item.quantity}
+                        </Td>
+                      </Tr>
+                    )
+                  })
+                }
+              </Tbody>
+            </Table>
           </div>
         </div>
 
@@ -169,13 +179,13 @@ const Discount=0
           </Flex>
           <Box>
             <Text fontSize="14px" p="3" fontWeight="bold">
-              Apply Promo code
+             Automatic Apply Promo code
             </Text>
           </Box>
 
           <div p="5" className="intt">
-            <input type="text" placeholder="PROMO CODE" />
-            <button>APPLY</button>
+            <input type="text" placeholder="PROMO CODE" value="MASAI30" />
+            <button>APPLIED</button>
           </div>
           <Text fontSize="14px" fontWeight="bold">
             Hint:- MASAI30
@@ -184,7 +194,7 @@ const Discount=0
           <Flex>
             <Box p="4">Discount</Box>
             <Spacer />
-            <Box p="4">-{dis}</Box>
+            <Box p="4">-{coupon}</Box>
           </Flex>
 
           <Flex>
@@ -204,7 +214,7 @@ const Discount=0
             <Box p="4">
               <Text fontSize="16" fontWeight="bold">
                 {" "}
-                ₹ {ap}
+                ₹ {AmountPay}
               </Text>
             </Box>
           </Flex>
@@ -218,10 +228,10 @@ const Discount=0
           <Flex>
             <Box p="4">You will earn</Box>
             <Spacer />
-            <Box p="4">{earn}</Box>
+            <Box p="4">{earn}-Gold Coin</Box>
           </Flex>
           <div className=" in2">
-            <button onClick={() => navigate("/payment")}>
+            <button onClick={handleClick}>
               PROCEED TO PAYMENT
             </button>
           </div>

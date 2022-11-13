@@ -6,7 +6,7 @@ import { useCart } from 'react-use-cart';
 
 
 let cardInitialData = { cardNum: "", cvv: "", name: "" };
-let userCard = { cardNum: "1111222233334444", cvv: "123", name: "lalit" };
+let userCard = { cardNum: "1111222233334444", cvv: "123", name: "xyz" };
 const Payment = () => {
    
 
@@ -31,12 +31,13 @@ const Payment = () => {
     }
   };
 
+const Price = localStorage.getItem("price") || null;
+
+
   const { cardNum, cvv, name } = card;
 
   return (
     <Box>
-      dfdf
-      <hr />
       <Box>
         <Text align="center" fontSize="28px" fontWeight="600">
           Payment
@@ -101,7 +102,7 @@ const Payment = () => {
             <Text fontSize="20px" fontWeight="bold">
               AMOUNT PAYABLE{" "}
             </Text>
-            <Text>Price++</Text>
+            <Text fontSize="20px" fontWeight="bold" >{Price}</Text>
           </Box>
           <Text p="3" fontSize="14px" fontWeight="bold">
             New Card
@@ -159,7 +160,7 @@ const Payment = () => {
               </div>
 
               <div className="btn-b">
-                <button onClick={handleFn}>Price</button>
+                <button onClick={handleFn} >PAY - {Price}</button>
               </div>
             </form>
           </Box>
