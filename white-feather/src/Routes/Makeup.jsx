@@ -29,7 +29,7 @@ const Makeup = () => {
       	  <div className={Styles.spinner}></div>
         </div>
     }
-    <Box mt="40px">
+    <Box  width='100%' textAlign='center' m='auto' mt="40px">
       <Text fontWeight={"bold"} lineHeight="50px" fontSize={"40px"}>MAKEUP</Text>
     </Box>
    <SimpleGrid className={Styles.grid} columns={[1,2,3]} spacing={10}>

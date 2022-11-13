@@ -24,7 +24,7 @@ import MobNav from './Components/MobNavbar/MobNav'
 
 function App() {
   
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState(true)
   useEffect(() => {
     const t = setTimeout(()=>{
       setLoading(false)

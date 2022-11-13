@@ -28,7 +28,7 @@ const Cart = () => {
     </Box>
     {
       (isEmpty) && <Box>
-        <Box><Text fontSize={"40px"} mt="25px">Oops! Your bag is empty!</Text></Box>
+        <Box w='100%' m='auto' textAlign='center' mt='20px'><Text fontSize={"40px"} mt="25px">Oops! Your bag is empty!</Text></Box>
         <Box mt="40px"><Img src="https://files.myglamm.com/site-images/original/img-empty-shopping-cart.png" m="auto"/></Box>
       </Box>
     }
