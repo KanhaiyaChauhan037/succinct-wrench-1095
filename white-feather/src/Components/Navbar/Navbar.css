@@ -26,9 +26,13 @@ p{
     gap: 0.5rem;
 }
 .navbar{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
     display: flex;
     flex-direction: column;
     background-color: #262726;
+    z-index: 5;
 }
 .navbar-top{
     display: flex;

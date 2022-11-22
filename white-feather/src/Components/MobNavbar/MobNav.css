@@ -1,5 +1,10 @@
 .mobNavbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
     display: none;
+    z-index: 5;
+    background-color: white;
 }
 .mobNavbarShowBar{
   width: 100%;

@@ -25,6 +25,7 @@ import "./MobNav.css";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../Context/AuthContextProvider'
 import { useContext } from "react";
+import {Link} from 'react-router-dom'
 
 function DrawerExample() {
   const {user,logOut} = useContext(AuthContext)
@@ -106,7 +107,16 @@ function DrawerExample() {
                 <h2>
                   <AccordionButton>
                     <Box flex="1" textAlign="left">
-                      Home
+                    <Link to='/' onClick={onClose}>Home</Link>
+                    </Box>
+                  </AccordionButton>
+                </h2>
+              </AccordionItem>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                    <Link to='/makeup' onClick={onClose}>Makeup</Link>
                     </Box>
                   </AccordionButton>
                 </h2>
