@@ -103,7 +103,7 @@ const Navbar = () => {
             <li class="nav-item">
               <button>
 
-              <a href="#">HOME</a>
+              <Link to="/">HOME</Link>
               </button>
             </li>
              {/* ============== 2nd Nav Item ==============  */}
