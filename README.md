@@ -11,7 +11,7 @@
 
 [Anu](https://github.com/AnuPratap10)
 
-[lalit](https://github.com/lalitUnstopable)
+[Lalit Pawar](https://github.com/lalitUnstopable)
 
 
 # Home page
