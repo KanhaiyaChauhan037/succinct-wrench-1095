@@ -36,7 +36,7 @@ const getproductLoad = () => {
 export const getData = () => async (dispatch) => {
   try {
     dispatch(getproductLoad());
-    let res = await axios.get("https://whitefeather2.herokuapp.com/data");
+    let res = await axios.get("https://whitefeather.onrender.com/data");
     dispatch(getproductSucess(res.data));
   } catch (error) {
     dispatch(getproductError());
@@ -47,7 +47,7 @@ export const getSingleData = (id) => async (dispatch) => {
   try {
     dispatch(getproductLoad());
     let res = await axios.get(
-      `https://whitefeather2.herokuapp.com/data/${id}`
+      `https://whitefeather.onrender.com/data/${id}`
     );
     dispatch(getSingleproductSucess(res.data));
     return;
@@ -59,7 +59,7 @@ export const getSingleData = (id) => async (dispatch) => {
 export const postData = async (data) => {
   try {
     let res = await axios.post(
-      "https://whitefeather2.herokuapp.com/data",
+      "https://whitefeather.onrender.com/data",
       data
     );    
     return true
@@ -71,7 +71,7 @@ export const postData = async (data) => {
 export const deleteData = async (id) => {
   try {
     let res = await axios.delete(
-      `https://whitefeather2.herokuapp.com/data/${id}`
+      `https://whitefeather.onrender.com/data/${id}`
     );
     return true;
   } catch (error) {
@@ -82,7 +82,7 @@ export const deleteData = async (id) => {
 export const updateData = async (id, data) => {
   try {
     let res = await axios.patch(
-      `https://whitefeather2.herokuapp.com/data/${id}`,
+      `https://whitefeather.onrender.com/data/${id}`,
       data
     );
     return true;
