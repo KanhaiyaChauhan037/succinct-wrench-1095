@@ -18,6 +18,6 @@
 ![logo](https://github.com/KanhaiyaChauhan037/succinct-wrench-1095/blob/master/Banner.png)
 # White Feather
 
-[Admin Dashboard](https://benevolent-belekoy-eee7bd.netlify.app)
+[Admin Dashboard](https://cozy-faun-f5aed5.netlify.app/)
 
 [Go Live](https://whitefeather.netlify.app/)
