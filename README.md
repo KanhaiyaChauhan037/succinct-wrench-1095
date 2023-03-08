@@ -81,6 +81,3 @@ If you want to run project in your local machine
 [Anu Pratap Singh](https://github.com/AnuPratap10)
 <br/>
 [Lalit Pawar](https://github.com/lalitUnstopable)
-
-
-
